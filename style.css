@@ -31,6 +31,21 @@ body {
 	font-family: "Trebuchet MS", Verdana, Arial, sans-serif;
 	background-color: #f2f6fb;
 	color: #0b1f33;
+	line-height: 1.6;
+}
+
+/* Add comfortable spacing around major page sections */
+section {
+	margin-top: 28px;
+	margin-bottom: 28px;
+}
+
+/* Better focus visibility for keyboard users */
+a:focus,
+button:focus,
+input:focus {
+	outline: 3px solid #025396;
+	outline-offset: 2px;
 }
 
 
@@ -38,7 +53,7 @@ body {
 .timeline {
 	display: flex;
 	gap: 20px;
-	padding: 24px 20px 8px 20px;
+	padding: 32px 20px 14px 20px;
 	overflow-x: auto;
 	scroll-behavior: smooth;
 }
@@ -49,7 +64,7 @@ body {
 	background-color: #ffffff;
 	border: 1px solid #d3e1f2;
 	border-radius: 12px;
-	padding: 16px;
+	padding: 20px;
 	box-shadow: 0 6px 16px rgba(1, 43, 79, 0.12);
 	transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -68,7 +83,7 @@ body {
 .card-title {
 	color: #0b1f33;
 	font-size: 18px;
-	margin-bottom: 10px;
+	margin-bottom: 12px;
 }
 
 .card-image {
@@ -79,7 +94,7 @@ body {
 
 .card-summary {
 	font-size: 14px;
-	margin-bottom: 8px;
+	margin-bottom: 12px;
 }
 
 /* Hidden details that reveal on hover */
@@ -101,7 +116,98 @@ body {
 	text-align: center;
 	color: #025396;
 	font-size: 14px;
-	margin: 10px 0 24px 0;
+	margin: 14px 0 36px 0;
+}
+
+/* Improve readability for long text blocks inside Bootstrap cards */
+.container p {
+	max-width: 70ch;
+}
+
+/* Three-column section wrapper to match Intel blue style from the top area */
+.pillars-section {
+	background: linear-gradient(to bottom, #ffffff, #eef5ff);
+	border-top: 4px solid #025396;
+	border-radius: 14px;
+	padding: 24px 18px;
+	box-shadow: 0 6px 16px rgba(1, 43, 79, 0.08);
+}
+
+/* Section heading style for visual unity */
+.section-title {
+	color: #025396;
+	font-weight: 700;
+	position: relative;
+	padding-bottom: 12px;
+}
+
+.section-title::after {
+	content: "";
+	display: block;
+	width: 70px;
+	height: 3px;
+	background-color: #03c7fd;
+	margin: 10px auto 0 auto;
+}
+
+/* Card styling aligned with timeline card feel */
+.pillars-card {
+	border-color: #cfe0f6 !important;
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pillars-card:hover {
+	transform: translateY(-4px);
+	box-shadow: 0 10px 20px rgba(1, 43, 79, 0.16) !important;
+}
+
+.pillars-card h3 {
+	color: #0b1f33;
+	margin-bottom: 14px;
+	justify-content: center;
+}
+
+.pillars-card p {
+	color: #334e68;
+	margin-inline: auto;
+}
+
+/* Icon color for section headings */
+.pillar-icon {
+	color: #025396;
+}
+
+/* Learn More links in the three-column section */
+.learn-more-link {
+	display: inline-block;
+	font-weight: 700;
+	text-decoration: none;
+	color: #025396;
+	border: 1px solid #7bb6e8;
+	padding: 6px 12px;
+	border-radius: 4px;
+}
+
+.learn-more-link:hover,
+.learn-more-link:focus {
+	text-decoration: underline;
+	background-color: #eaf4ff;
+}
+
+/* Footer styles */
+.site-footer {
+	background-color: #0b1f33;
+	color: #ffffff;
+}
+
+.site-footer a {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.site-footer a:hover,
+.site-footer a:focus {
+	text-decoration: underline;
 }
 
 /* Stack cards vertically on small screens */
