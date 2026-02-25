@@ -1,0 +1,123 @@
+*{/* Add your CSS here */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(to left, #025396, #0180C7);
+  color: #fff;
+  padding: 10px 20px 48px 20px;
+  img{
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+  }
+    h1 {
+        text-align: center;
+        font-size: 40px;
+        margin: 16px;
+    }
+    p{
+        text-align: center;
+        font-size: 14px;
+        margin: 5px 0 0 0;
+    }
+}
+
+
+body {
+	font-family: "Trebuchet MS", Verdana, Arial, sans-serif;
+	background-color: #f2f6fb;
+	color: #0b1f33;
+}
+
+
+/* Timeline layout (flexbox) */
+.timeline {
+	display: flex;
+	gap: 20px;
+	padding: 24px 20px 8px 20px;
+	overflow-x: auto;
+	scroll-behavior: smooth;
+}
+
+/* Timeline card styling */
+.timeline-card {
+	flex: 0 0 280px;
+	background-color: #ffffff;
+	border: 1px solid #d3e1f2;
+	border-radius: 12px;
+	padding: 16px;
+	box-shadow: 0 6px 16px rgba(1, 43, 79, 0.12);
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.timeline-card:hover {
+	transform: translateY(-4px);
+	box-shadow: 0 10px 20px rgba(1, 43, 79, 0.2);
+}
+
+.card-year {
+	color: #025396;
+	font-size: 24px;
+	margin-bottom: 4px;
+}
+
+.card-title {
+	color: #0b1f33;
+	font-size: 18px;
+	margin-bottom: 10px;
+}
+
+.card-image {
+	width: 100%;
+	border-radius: 8px;
+	margin-bottom: 10px;
+}
+
+.card-summary {
+	font-size: 14px;
+	margin-bottom: 8px;
+}
+
+/* Hidden details that reveal on hover */
+.card-details {
+	font-size: 14px;
+	color: #334e68;
+	max-height: 0;
+	opacity: 0;
+	overflow: hidden;
+	transition: max-height 0.25s ease, opacity 0.25s ease;
+}
+
+.timeline-card:hover .card-details {
+	max-height: 120px;
+	opacity: 1;
+}
+
+.timeline-hint {
+	text-align: center;
+	color: #025396;
+	font-size: 14px;
+	margin: 10px 0 24px 0;
+}
+
+/* Stack cards vertically on small screens */
+@media (max-width: 768px) {
+	.timeline {
+		flex-direction: column;
+		overflow-x: visible;
+	}
+
+	.timeline-card {
+		flex: 1 1 auto;
+	}
+
+	/* Always show details on small screens */
+	.card-details {
+		max-height: none;
+		opacity: 1;
+	}
+}
